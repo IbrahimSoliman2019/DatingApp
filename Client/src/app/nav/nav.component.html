@@ -34,6 +34,13 @@
             >
           </li>
         </ng-container>
+        <li class="nav-item" *ngIf="UserSource$ | async">
+          <a
+            class="nav-link"
+           routerLink="errors"
+            >Errors</a
+          >
+        </li>
         
       </ul>
       <div class="dropdown" *ngIf="(UserSource$ | async) as user">
